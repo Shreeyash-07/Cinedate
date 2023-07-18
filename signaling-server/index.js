@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 8080;
 const server = http.listen(PORT, () => {
   console.log(`signalling server listening on port ${PORT}`);
 });
-const io = new Server(server);
+const io = new Server(server, {
+  addTrailingSlash: false,
+});
 
 app.get("/", (req, res) => {
   res.send(
