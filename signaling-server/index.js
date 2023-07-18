@@ -9,6 +9,10 @@ const server = http.listen(PORT, () => {
   console.log(`signalling server listening on port ${PORT}`);
 });
 const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
   addTrailingSlash: false,
 });
 

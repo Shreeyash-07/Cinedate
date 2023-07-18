@@ -4,7 +4,7 @@ let socket = null;
 const URL = "https://cinedateserver.vercel.app/";
 
 export const connectWithSocketIOServer = () => {
-  socket = io(URL, { transports: ["websocket"] });
+  socket = io(URL, { transports: ["polling", "websocket"] });
   socket.on("connect", () => {
     console.log("Connected to socket Server");
   });
