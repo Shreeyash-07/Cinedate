@@ -10,6 +10,19 @@ const server = http.listen(PORT, () => {
 });
 const io = new Server(server);
 
+app.get("/", (req, res) => {
+  res.send(
+    `<html>
+      <head>Response from socket server ${PORT} </head>
+      <body>
+        <h1>
+          This page was render direcly from the server{" "}
+          <p>Hello there welcome to my website</p>
+        </h1>
+      </body>
+    </html>`
+  );
+});
 var userConnections = [];
 io.on("connection", (socket) => {
   console.log(`A client connected with id ${socket.id}`);
@@ -58,12 +71,14 @@ const getMeetingId = (connId) => {
   );
   return foundUser ? foundUser.meetingId : null;
 };
+
 const getName = (connId) => {
   const foundUser = userConnections.find(
     (user) => user.connectionId === connId
   );
   return foundUser ? foundUser.userName : null;
 };
+
 const broadcastDisconnectedUser = (id) => {};
 
 const handleCreateRoom = (socket, data) => {
