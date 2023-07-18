@@ -3,10 +3,10 @@ const app = express();
 const http = require("http").createServer(app);
 const { Server } = require("socket.io");
 
-const port = 3001;
+const PORT = process.env.PORT || 3001;
 
-const server = http.listen(port, () => {
-  console.log(`signalling server listening on port ${port}`);
+const server = http.listen(PORT, () => {
+  console.log(`signalling server listening on port ${PORT}`);
 });
 const io = new Server(server);
 
