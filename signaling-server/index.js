@@ -3,7 +3,7 @@ const app = express();
 const http = require("http").createServer(app);
 const { Server } = require("socket.io");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 const server = http.listen(PORT, () => {
   console.log(`signalling server listening on port ${PORT}`);
