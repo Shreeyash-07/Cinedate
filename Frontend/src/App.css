@@ -1,0 +1,82 @@
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContainer {
+  width: 98%;
+  height: 98vh;
+  background: #f9fafb;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 30px; */
+  flex-direction: column;
+  position: relative;
+}
+
+.screenContainer {
+  border-width: 10px;
+  border-color: black;
+  background: pink;
+  position: relative;
+  width: 95%;
+  height: 90%;
+  border-radius: 20px;
+}
+.smallScreen {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  background: #fff;
+  right: 20px;
+  top: 20px;
+}
+.screenImg {
+  width: 100%;
+  height: 100%;
+}
+.iconbucket {
+  width: 60px;
+  height: 60px;
+  background: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 10px;
+}
+.icons {
+  color: #fff;
+  font-size: 30px;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: row;
+}
+.messageContainer {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: pink;
+  bottom: 20px;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 50px;
+}
+
+.videoScreen {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  border-radius: 20px;
+}

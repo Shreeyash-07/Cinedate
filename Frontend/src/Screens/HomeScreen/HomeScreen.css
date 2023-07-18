@@ -1,0 +1,157 @@
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContainer {
+  width: 98%;
+  height: 98vh;
+  background: #1d1d1d;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 30px; */
+  flex-direction: column;
+  position: relative;
+}
+
+.screenContainer {
+  border-width: 10px;
+  border-color: black;
+  background: #121212;
+  position: relative;
+  background-image: url("../LoginScreen/Camera_is_off.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.screenImg {
+  width: 100%;
+  height: 100%;
+}
+.iconbucket {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 10px;
+}
+.icons {
+  color: #fff;
+  font-size: 25px;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: row;
+}
+.messageContainer {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  bottom: 20px;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 50px;
+}
+
+.videoScreen {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  border-radius: 10px;
+  position: relative;
+}
+
+.chatModal {
+  position: absolute;
+  bottom: 87px;
+  right: 50px;
+}
+.disconneticon {
+  color: #fff;
+  font-size: 25px;
+}
+.disconnecticonbucket {
+  width: 60px;
+  height: 50px;
+  background: #f8000f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25%;
+  border: 1.5px solid #f8000f;
+  margin: 10px;
+}
+.smallScreen {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  background: #121212;
+  /* position: relative; */
+  background-image: url("../LoginScreen/Camera_is_off.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  border: 0.5px solid #fff;
+  right: 20px;
+  top: 20px;
+}
+.smallScreenStream {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  background: #121212;
+  background-image: url("../LoginScreen/Camera_is_off.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  border: 0.5px solid #fff;
+  right: 20px;
+  top: 180px;
+}
+.copyId {
+  cursor: pointer;
+  min-width: 220px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  position: absolute;
+  color: white;
+  font-family: Poppins;
+  left: 35px;
+  bottom: 15px;
+}
+.clipicon {
+  margin-left: 10px;
+}
+.nameLabel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: Poppins;
+  color: #fff;
+  background: #1d1d1d;
+  padding: 5px;
+  border-radius: 5px;
+}

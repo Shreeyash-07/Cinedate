@@ -1,0 +1,23 @@
+.smallvideoScreen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+}
+.blackScreen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.streamsenderName {
+  width: 100px;
+  height: 100px;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  color: #fff;
+  left: 10px;
+  bottom: 10px;
+  font-family: Poppins;
+}
