@@ -1,5 +1,5 @@
 import "./SmallScreen.css";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 
 const SmallScreen = ({ stream, vref, name }) => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const SmallScreen = ({ stream, vref, name }) => {
     if (vref.current && stream) {
       vref.current.srcObject = stream;
     }
-  }, [stream]);
+  }, [stream, vref, name]);
 
   return (
     <div className="smallScreenContainer">

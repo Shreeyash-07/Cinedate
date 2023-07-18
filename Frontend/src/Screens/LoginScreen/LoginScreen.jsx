@@ -4,12 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import * as socket from "../../SocketConnection/SocketConn";
 import { useDispatch } from "react-redux";
-import { setInRoom } from "../../Slices/videoRoomSlice";
-import { setLocalStream } from "../../Slices/videoRoomSlice";
+import {
+  setInRoom,
+  setPreferences,
+  setLocalStream,
+} from "../../Slices/videoRoomSlice";
 import { FiVideoOff, FiVideo } from "react-icons/fi";
 import { BiMicrophone, BiMicrophoneOff } from "react-icons/bi";
-import { setPreferences } from "../../Slices/videoRoomSlice";
-import logo from "./logo.png";
 const LoginScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const LoginScreen = () => {
       setStream(localStream);
     };
     run();
-  }, []);
+  }, [getUserStream]);
 
   const createDateRoom = async (e) => {
     e.preventDefault();
@@ -88,7 +89,7 @@ const LoginScreen = () => {
         videoRef.current.srcObject = newStream;
       }
     }
-    setVideoEnable(!videoEnable);
+    setMicEnable(!micEnable);
   };
 
   const handleAudio = async () => {

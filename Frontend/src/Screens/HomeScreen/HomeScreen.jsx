@@ -6,7 +6,6 @@ import {
 } from "react-icons/bi";
 import { PiPhoneDisconnectFill } from "react-icons/pi";
 import { FiVideoOff, FiVideo, FiSettings } from "react-icons/fi";
-import { PiMonitor } from "react-icons/pi";
 import {
   LuScreenShare,
   LuScreenShareOff,
@@ -17,23 +16,20 @@ import { useEffect, useRef, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import Chat from "../Chat/Chat";
 import SmallScreen from "../SmallScreen/SmallScreen";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { setLocalStream } from "../../Slices/videoRoomSlice";
 import { setLocalScreenStream } from "../../Slices/videoRoomSlice";
-import { addTracks } from "../../Hooks/WebRTC";
-import { updateStream } from "../../Hooks/WebRTC";
+import { addTracks, updateStream } from "../../Hooks/WebRTC";
 import {
   getCurrentUserName,
   socketIO,
 } from "../../SocketConnection/SocketConn";
 import { sendChatMessage } from "../../SocketConnection/SocketConn";
 import { addScreenTrack } from "../../Hooks/WebRTC";
-import { removeScreenShareTrack, removeVideoTrack } from "../../Hooks/WebRTC";
+import { removeScreenShareTrack } from "../../Hooks/WebRTC";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
-  const { state } = useLocation();
   const { id } = useParams();
   const remoteId = useSelector((state) => state.videoRoom.remoteId);
   const localStream = useSelector((state) => state.videoRoom.localStream);
@@ -55,7 +51,6 @@ const HomeScreen = () => {
   const [stream, setStream] = useState(null);
   const [chatModalOpen, setChatModalOpen] = useState(false);
   const [messages, setMessages] = useState([]);
-  const [cursorPosition, setCursorPosition] = useState({ top: 0, left: 0 });
   const localvideoRef = useRef(null);
   const remoteVideoRef = useRef(null);
   const localScreenRef = useRef(null);
@@ -172,9 +167,6 @@ const HomeScreen = () => {
     }
   };
 
-  const onMouseMove = (e) => {
-    setCursorPosition({ top: e.screenY, left: e.screenX });
-  };
   return (
     <div className="mainContainer">
       <div className="innerContainer">
