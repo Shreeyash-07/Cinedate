@@ -1,6 +1,5 @@
 import "./SmallScreen.css";
 import React, { useEffect, useRef, useState } from "react";
-import { usePeerConnection } from "../../Hooks/PeerConnectionProvider";
 
 const SmallScreen = ({ stream, vref, name }) => {
   useEffect(() => {

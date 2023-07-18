@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 import { RTCConnection, SDPProcess } from "../Hooks/WebRTC";
 let socket = null;
-const URL = "https://cinedateserver.vercel.app/";
+const URL = "https://cinedateserver.onrender.com/";
 
 export const connectWithSocketIOServer = () => {
   socket = io(URL, { transports: ["polling", "websocket"] });

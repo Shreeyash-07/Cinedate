@@ -14,7 +14,6 @@ import {
   LuClipboardCheck,
 } from "react-icons/lu";
 import { useEffect, useRef, useState } from "react";
-import { usePeerConnection } from "../../Hooks/PeerConnectionProvider";
 import { useParams, useLocation } from "react-router-dom";
 import Chat from "../Chat/Chat";
 import SmallScreen from "../SmallScreen/SmallScreen";
